@@ -1,0 +1,67 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 64px;
+  gap: 2rem;
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-logo span { color: var(--accent2); }
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all 0.2s;
+  white-space: nowrap;
+  border: none;
+  background: none;
+}
+
+.nav-link:hover { color: var(--text); background: var(--bg3); }
+.nav-link.active { color: var(--accent); background: rgba(0, 212, 170, 0.12); }
+
+.nav-btn {
+  margin-left: auto;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover { background: #00bfa0; }
+
+@media (max-width: 768px) {
+  .nav-link:not(.active) { display: none; }
+  .nav { gap: 1rem; padding: 0 1rem; }
+}

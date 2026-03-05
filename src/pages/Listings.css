@@ -1,0 +1,198 @@
+.listings-header {
+  padding: 3rem 4rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.listings-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.listings-sub { color: var(--muted); font-size: 0.875rem; }
+
+.sort-select {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+.filter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+.bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 4rem 4rem;
+}
+
+.bike-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.bike-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,212,170,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.bike-card.unavail { opacity: 0.6; }
+
+.bike-card-visual {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bike-badge {
+  position: absolute;
+  top: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.bike-badge-unavail { right: 0.75rem; background: var(--accent2); color: #fff; }
+.bike-badge-avail { left: 0.75rem; background: rgba(0,212,170,0.15); border: 1px solid rgba(0,212,170,0.3); color: var(--accent); }
+
+.bike-card-body { padding: 1.25rem 1.5rem 1.5rem; }
+
+.bike-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.bike-card-name { font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
+.bike-card-type { color: var(--muted); font-size: 0.78rem; }
+
+.bike-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.bike-price span { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; color: var(--muted); font-weight: 400; }
+
+.bike-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--accent3);
+  margin-bottom: 0.5rem;
+}
+
+.bike-rating span { color: var(--muted); }
+
+.bike-specs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.bike-spec { font-size: 0.75rem; color: var(--muted); }
+
+.battery-bar {
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.battery-fill { height: 100%; border-radius: 2px; transition: width 0.5s; }
+
+.bike-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.bike-feat {
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.bike-actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+
+.btn-book {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-book:hover:not(:disabled) { background: #00bfa0; }
+.btn-book:disabled { background: var(--bg3); color: var(--muted); cursor: not-allowed; }
+
+.btn-wish {
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  background: var(--bg3);
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-wish:hover { background: rgba(255,77,109,0.2); color: var(--accent2); }
+
+@media (max-width: 768px) {
+  .listings-header { padding: 2rem 1.5rem 1rem; }
+  .filter-bar { padding: 0 1.5rem; }
+  .bikes-grid { padding: 0 1.5rem 3rem; grid-template-columns: 1fr; }
+}
