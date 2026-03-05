@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚴 CycleGo — Premium Bike Rental Platform
 
 A complete, production-grade React bike rental app with 5 full pages and no backend required.
@@ -98,3 +99,7 @@ Output will be in the `build/` folder — ready to deploy on Netlify, Vercel, or
 ---
 
 Made with ❤️ by CycleGo
+=======
+# bikerentals
+i will bikes for rentals
+>>>>>>> c40ba0610f65b0c11d543822de111ce6369dbefd
